@@ -26,7 +26,7 @@ header {
     width: 5em;
     height: 100%;
     margin-left: 10%;
-    
+
 }
 
 .header-logo img {
@@ -128,7 +128,7 @@ header {
 
 .contenedor-index .index-tittle h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.5em;
+    font-size: 5em;
     color: hsl(59, 98%, 52%);
     text-align: center;
     line-height: 1em;
@@ -136,9 +136,10 @@ header {
 }
 
 .contenedor-index .index-tittle p {
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: center;
     color: aliceblue;
+    padding: 1em;
 }
 
 
@@ -146,11 +147,33 @@ header {
 @media screen and (max-width:767px) {
     .contenedor-index .index-tittle h1 {
         font-family: 'Times New Roman', Times, serif;
-        font-size: 2em;
+        font-size: 1.8em;
         color: hsl(59, 98%, 52%);
         text-align: center;
         line-height: 1em;
         text-shadow: 3px 2px 0 #1235f8, -3px 0 #1235f8, -3px 1px 0 #1235f8, -3px -1px 0 #1235f8;
+    }
+    .contenedor-index .index-tittle p {
+        font-size: 0.7em;
+        text-align: center;
+        color: aliceblue;
+        padding: 1em;
+    }
+}
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .contenedor-index .index-tittle h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 3.5em;
+        color: hsl(59, 98%, 52%);
+        text-align: center;
+        line-height: 1em;
+        text-shadow: 3px 2px 0 #1235f8, -3px 0 #1235f8, -3px 1px 0 #1235f8, -3px -1px 0 #1235f8;
+    }
+    .contenedor-index .index-tittle p {
+        font-size: 1em;
+        text-align: center;
+        color: aliceblue;
+        padding: 1em;
     }
 }
 
@@ -158,30 +181,33 @@ header {
 #footer {
     font-family: sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-
-
 }
 
 .footer {
     background-color: black;
-    padding: 80px 0;
+    padding: 3em 0 2em 0;
     width: 100%;
 }
 
 .footer-row {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .footer-links {
-    width: 33%;
+    width: 30%;
     padding: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
+    
+    
 }
 
 .footer-links h4 {
@@ -215,27 +241,45 @@ header {
 
 .social-link {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 .social-link img {
-    display: inline-block;
-    min-height: 40px;
-    width: 40px;
+    min-height: 3em;
+    width: 3em;
     background-color: rgb(255, 255, 255, 0.9);
-    margin: 10px 20px 10px 0;
-    text-align: right;
-    line-height: 40px;
+    margin: 0.5em;
+    text-align: center;
+    line-height: 2em;
     border-radius: 50%;
     color: #ffffff;
     transition: all .5s ease;
 }
 
-.social-link a:hover {
-    background-color: #00c3ff;
+.social-link img:hover {
+    background-color: #2f00ff;
 }
 
-@media (max-width:991px) {
+@media screen and (max-width:768px) {
+    
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: 1em;
+        
+    }
+    .footer-links ul li a {
+        font-size: 0.8em;
+    }
+   
+}
+@media screen and (min-width:767px) and (max-width:1023px){
     .footer-row {
         text-align: center;
     }
@@ -244,4 +288,27 @@ header {
         width: 100%;
         margin-bottom: 30px;
     }
+    .footer-links ul li a {
+        font-size: 1em;
+    }
+    
+}
+
+.footer-logo img {
+    border-radius: 1em;
+
+}
+.footer2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid white;
+    background: #242424;
+
+}
+
+.footer2 .derechos {
+    font-size: 0.7em;
+    text-align: center;
+    color: white;
 }
