@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
+
 
 }
 
@@ -105,77 +105,214 @@ header {
     }
 }
 
-/* Portada Principal  */
-
-.contenedor-index {
-    height: 100vh;
-    background-image: linear-gradient(to top, rgba(8, 24, 255, 0.671) 0%, rgba(255, 255, 255, 0.5) 100%), url(../img/portada.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contenedor-index .index-tittle {
-    height: 100%;
+/* MAIN */
+.main-container {
+    width: 100%;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    color: white;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.068) 0%, rgba(255, 255, 255, 0.068) 100%), url(../img/info.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
-.contenedor-index .index-tittle h1 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 5em;
-    color: hsl(59, 98%, 52%);
+.main-container .text {
+    background-color: #ffffff05;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(25px);
+    width: 60%;
     text-align: center;
+    padding: 1em;
+    border-radius: 15%;
+}
+
+.main-container .text h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
+    color: hsl(59, 98%, 52%);
     line-height: 1em;
     text-shadow: 3px 2px 0 #1235f8, -3px 0 #1235f8, -3px 1px 0 #1235f8, -3px -1px 0 #1235f8;
+
 }
 
-.contenedor-index .index-tittle p {
-    font-size: 1em;
-    text-align: center;
-    color: aliceblue;
-    padding: 1em;
+.main-container .text p {
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
 }
-
-
 
 @media screen and (max-width:767px) {
-    .contenedor-index .index-tittle h1 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 1.8em;
-        color: hsl(59, 98%, 52%);
-        text-align: center;
-        line-height: 1em;
-        text-shadow: 3px 2px 0 #1235f8, -3px 0 #1235f8, -3px 1px 0 #1235f8, -3px -1px 0 #1235f8;
+    .main-container {
+        width: 100%;
+        height: 60vh;
+        min-height: 60vh;
     }
-    .contenedor-index .index-tittle p {
-        font-size: 0.7em;
-        text-align: center;
-        color: aliceblue;
-        padding: 1em;
+
+    .main-container .text {
+        width: 85%;
+        min-width: 90%;
     }
-}
-@media screen and (min-width:767px) and (max-width:1023px) {
-    .contenedor-index .index-tittle h1 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 3.5em;
-        color: hsl(59, 98%, 52%);
-        text-align: center;
-        line-height: 1em;
-        text-shadow: 3px 2px 0 #1235f8, -3px 0 #1235f8, -3px 1px 0 #1235f8, -3px -1px 0 #1235f8;
+
+    .main-container .text h2 {
+        font-size: 1.5em;
+        line-height: 1.1em;
     }
-    .contenedor-index .index-tittle p {
+
+    .main-container .text p {
         font-size: 1em;
-        text-align: center;
-        color: aliceblue;
-        padding: 1em;
+    }
+
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+    .main-container {
+        height: 75vh;
+        min-height: 60vh;
+    }
+
+    .main-container .text {
+        width: 90%;
+
     }
 }
+
+/* SOBRE NOSOTROS */
+.info-nosotros {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0em 1em 0em;
+}
+
+.info-nosotros h1 {
+    font-size: 3em;
+    margin: 0.5em;
+
+}
+
+.info-nosotros .info-container {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+}
+
+.info-nosotros .info-container .img-nosotros {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info-nosotros .info-container .img-nosotros img {
+    width: 75%;
+    height: 75%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+}
+
+.info-nosotros .info-container .info-card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.info-nosotros .info-container .info-card .info-text {
+    position: absolute;
+    background: rgba(238, 232, 232, 0.479);
+    border-radius: 30px;
+    padding: 0.8em;
+}
+
+.info-nosotros .info-container .info-card .info-text p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+/* VALORES */
+.container-valores {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.521);
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.container-valores .valores {
+    width: 30%;
+    height: 80%;
+    position: relative;
+
+}
+
+.container-valores .valores .card {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgb(241, 241, 241);
+    border-radius: 30px;
+
+}
+
+.container-valores .valores .card h3 {
+    font-size: 2.2em;
+    margin: 1em;
+
+}
+
+.container-valores .valores .card ul {
+    margin: 0 1em 0 2em;
+}
+
+.container-valores .valores .card ul li {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: left;
+    line-height: 1.5em;
+
+
+}
+
+.container-valores .valores .card p {
+    font-size: 1.5em;
+    margin: 1em;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer */
 #footer {
@@ -184,12 +321,14 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+
 }
 
 .footer {
     background-color: black;
     padding: 3em 0 2em 0;
     width: 100%;
+
 }
 
 .footer-row {
@@ -206,8 +345,8 @@ header {
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    
-    
+
+
 }
 
 .footer-links h4 {
@@ -263,7 +402,7 @@ header {
 }
 
 @media screen and (max-width:768px) {
-    
+
     .footer-row {
         text-align: center;
     }
@@ -272,14 +411,16 @@ header {
         width: 100%;
         margin-bottom: 30px;
         margin-top: 1em;
-        
+
     }
+
     .footer-links ul li a {
         font-size: 0.8em;
     }
-   
+
 }
-@media screen and (min-width:767px) and (max-width:1023px){
+
+@media screen and (min-width:767px) and (max-width:1023px) {
     .footer-row {
         text-align: center;
     }
@@ -288,16 +429,18 @@ header {
         width: 100%;
         margin-bottom: 30px;
     }
+
     .footer-links ul li a {
         font-size: 1em;
     }
-    
+
 }
 
 .footer-logo img {
     border-radius: 1em;
 
 }
+
 .footer2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
@@ -312,4 +455,3 @@ header {
     text-align: center;
     color: white;
 }
-
