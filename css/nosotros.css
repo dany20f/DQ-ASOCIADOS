@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
 }
 
 html {
@@ -184,53 +182,59 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 1em 0em 1em 0em;
+    padding: 2em 0em 1em 0em;
+
 }
 
 .info-nosotros h1 {
     font-size: 3em;
-    margin: 0.5em;
-
+    margin: 0.1em;
+    border-bottom: 2px solid yellow;
 }
 
 .info-nosotros .info-container {
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: flex;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 3em 0 3em 0;
+
 }
 
 .info-nosotros .info-container .img-nosotros {
-    width: 35%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
 .info-nosotros .info-container .img-nosotros img {
-    width: 75%;
+    width: 80%;
     height: 75%;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 30px;
 }
 
 .info-nosotros .info-container .info-card {
-    width: 50%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+
+
+
 }
 
 .info-nosotros .info-container .info-card .info-text {
-    position: absolute;
     background: rgba(238, 232, 232, 0.479);
     border-radius: 30px;
     padding: 0.8em;
+
 }
 
 .info-nosotros .info-container .info-card .info-text p {
@@ -239,80 +243,328 @@ header {
 }
 
 /* VALORES */
-.container-valores {
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.521);
-    border-top: 2px solid rgb(0, 0, 0);
+@media screen and (min-width:1024px) {
+    .container-valores {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.521);
+        border-top: 2px solid rgb(0, 0, 0);
+    }
+
+    .container-valores .valores {
+        width: 30%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .container-valores .valores .card {
+        width: 90%;
+        height: 85%;
+        background: rgb(241, 241, 241);
+        border-radius: 30px;
+        border: 2px inset rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-valores .valores .card h3 {
+        width: auto;
+        font-size: 2.2em;
+        margin: 0.7em;
+        border-bottom: 2px solid #1235f8;
+
+    }
+
+    .container-valores .valores .card .card-text {
+        width: 90%;
+
+    }
+
+    .container-valores .valores .card .card-text ul {
+        margin: 0 1em 0 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+
+    }
+
+    .container-valores .valores .card .card-text ul li {
+        font-size: 1.5em;
+
+        line-height: 1.5em;
+
+
+    }
+
+    .container-valores .valores .card .card-text p {
+        font-size: 1.5em;
+        margin: 1em;
+        text-align: justify;
+
+    }
 }
 
-.container-valores .valores {
-    width: 30%;
-    height: 80%;
-    position: relative;
+
+@media screen and (max-width:767px) {
+
+    /* SOBRE NOSOTROS */
+
+    .info-nosotros {
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0.5em 0 1em 0;
+    }
+
+    .info-nosotros h1 {
+        font-size: 1.8em;
+        margin: 1em 0 0 0;
+        border-bottom: 2px solid yellow;
+        text-align: center;
+    }
+
+    .info-nosotros .info-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0 1em 0;
+    }
+
+    .info-nosotros .info-container .img-nosotros {
+        width: 80%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+        margin: 1em 0 2em 0;
+    }
+
+    .info-nosotros .info-container .img-nosotros img {
+        width: 90%;
+        height: auto;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 30px;
+    }
+
+    .info-nosotros .info-container .info-card {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .info-nosotros .info-container .info-card .info-text {
+
+        background: rgba(238, 232, 232, 0.479);
+        border-radius: 30px;
+        padding: 0.8em;
+    }
+
+    .info-nosotros .info-container .info-card .info-text p {
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    .container-valores {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        background: rgb(255, 255, 255);
+        border-top: 2px solid rgb(0, 0, 0);
+        margin: 1em 0 1em 0;
+    }
+
+    .container-valores .valores {
+        width: 80%;
+        height: auto;
+        margin: 2em 0 1em 0;
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .container-valores .valores .card {
+        width: 90%;
+        height: 100%;
+        background: rgb(241, 241, 241);
+        border-radius: 30px;
+        border: 2px inset rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-valores .valores .card h3 {
+        font-size: 1.5em;
+        margin: 0.7em;
+        border-bottom: 2px solid #1235f8;
+    }
+
+    .container-valores .valores .card .card-text {
+        width: 90%;
+    }
+
+    .container-valores .valores .card p {
+        font-size: 1.2em;
+        margin: 0.5em 0.5em 1em 1em;
+        text-align: start;
+    }
+
+    .container-valores .valores .card ul {
+        margin: 0.5em 0.5em 1em 1.5em;
+        text-align: start;
+        font-size: 1.2em;
+    }
 
 }
 
-.container-valores .valores .card {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: rgb(241, 241, 241);
-    border-radius: 30px;
+@media screen and (min-width:767px) and (max-width:1023px) {
+    /* SOBRE NOSOTROS */
 
+    .info-nosotros {
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0.5em 0 1em 0;
+    }
+
+    .info-nosotros h1 {
+        font-size: 2.8em;
+        margin: 0.5em;
+        border-bottom: 2px solid yellow;
+    }
+
+    .info-nosotros .info-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .info-nosotros .info-container .img-nosotros {
+        width: 65%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        margin: 2em;
+    }
+
+    .info-nosotros .info-container .img-nosotros img {
+        width: 100%;
+        height: 30vh;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 30px;
+    }
+
+    .info-nosotros .info-container .info-card {
+        width: 65%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .info-nosotros .info-container .info-card .info-text {
+
+        background: rgba(238, 232, 232, 0.479);
+        border-radius: 30px;
+        padding: 0.8em;
+    }
+
+    .info-nosotros .info-container .info-card .info-text p {
+        font-size: 1.6em;
+        text-align: justify;
+    }
+
+    .container-valores {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        background: rgb(255, 255, 255);
+        border-top: 2px solid rgb(0, 0, 0);
+        margin: 1em 0 1em 0;
+    }
+
+    .container-valores .valores {
+        width: 65%;
+        height: auto;
+        margin: 2em 0 1em 0;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .container-valores .valores .card {
+        width: 90%;
+        height: 100%;
+        background: rgb(241, 241, 241);
+        border-radius: 30px;
+        border: 2px inset rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-valores .valores .card h3 {
+        font-size: 2em;
+        margin: 0.7em;
+        border-bottom: 2px solid #1235f8
+    }
+
+    .container-valores .valores .card .card-text {
+        width: 90%;
+
+    }
+
+    .container-valores .valores .card p {
+        font-size: 1.6em;
+        margin: 0.5em 0.5em 1em 1em;
+        text-align: start;
+    }
+
+    .container-valores .valores .card ul {
+        font-size: 1.6em;
+        margin: 0.5em 0.5em 1em 1.5em;
+        text-align: start;
+
+    }
 }
-
-.container-valores .valores .card h3 {
-    font-size: 2.2em;
-    margin: 1em;
-
-}
-
-.container-valores .valores .card ul {
-    margin: 0 1em 0 2em;
-}
-
-.container-valores .valores .card ul li {
-    font-size: 1.5em;
-    display: flex;
-    justify-content: left;
-    line-height: 1.5em;
-
-
-}
-
-.container-valores .valores .card p {
-    font-size: 1.5em;
-    margin: 1em;
-    text-align: justify;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer */
 #footer {
