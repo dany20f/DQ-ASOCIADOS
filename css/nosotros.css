@@ -596,7 +596,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: top;
-    align-items: center;
+    align-items: end;
 
 
 }
@@ -667,7 +667,7 @@ header {
     }
 
     .footer-links ul li a {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
 }
@@ -680,6 +680,7 @@ header {
     .footer-links {
         width: 100%;
         margin-bottom: 30px;
+        background-color: #00c3ff;
     }
 
     .footer-links ul li a {
