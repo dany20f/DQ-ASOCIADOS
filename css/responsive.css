@@ -34,7 +34,7 @@
     .footer-links {
         width: 100%;
         margin-bottom: 2rem;
-       
+
 
     }
 
@@ -84,7 +84,7 @@
         padding: 0.4rem;
         color: blue;
         text-decoration: none;
-
+        margin: 0 ;
 
     }
 
@@ -95,7 +95,7 @@
 
     .header-links a.active {
         color: #ff0000;
-        border-bottom-color: rgb(0, 0, 0);
+        border-bottom-color: white;
     }
 
     .header-menu {
@@ -147,6 +147,8 @@
 
     .container_portada {
         height: 100vh;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
     }
 
     .portada {
