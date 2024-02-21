@@ -84,7 +84,7 @@
         padding: 0.4rem;
         color: blue;
         text-decoration: none;
-        margin: 0 ;
+        margin: 0;
 
     }
 
@@ -147,8 +147,15 @@
 
     .container_portada {
         height: 100vh;
+    }
+
+    .background {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        /* Para mejorar el desplazamiento en iOS */
+        scroll-behavior: smooth;
+        /* Para un desplazamiento suave */
     }
 
     .portada {
