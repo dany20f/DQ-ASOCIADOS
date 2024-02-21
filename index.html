@@ -1,93 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DQ&ASOCIADOS</title>
-    <script src="https://kit.fontawesome.com/be96891221.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-
-<body>
-    <header>
-        <div class="header-logo">
-            <a href="index.html"><img src="img/logo.png" alt=""></a>
-        </div>
-        <div class="header-items" id="_items">
-            <a href="index.html">INICIO</a>
-            <a href="nosotros.html">NOSOTROS</a>
-            <a href="servicios.html">SERVICIOS</a>
-            <a href="contactanos.html">CONTACTANOS</a>
-        </div>
-        <div class="nav-toggle" id="_toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </div>
-        <script>
-            _toggle.onclick = () => {
-                _items.classList.toggle("open")
-            }
-        </script>
-    </header>
-    <main>
-        <div class="contenedor-index">
-            <div class="index-tittle">
-                <h1>DQ&ASOCIADOS</h1>
-                <p>ASESORIA CONTABLE, TRIBUTARIO Y FINANCIERO</p>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="js/funtions.js"></script>
+        <link rel="shortcut icon" href="img/minilogo.jpg" type="image/x-icon">
+        <title>DQYASOCIADOS</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-logo">
+                <a href="index.html"><h2> DQ&<span>ASOCIADOS</span></h2></a>
             </div>
-        </div>
-    </main>
-    <footer id="footer">
-        <footer class="footer">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <h4>SIGUENOS EN NUESTRAS REDES:</h4><br>
-                    <div class="social-link">
-                        <img src="img/facebook.svg" height="24px" width="24px">
-                        <img src="img/instagram.svg" height="24px" width="24px">
-                        <img src="img/twitter.svg" height="24px" width="24px">
+            <div class="header-links" id="_links">
+                <a href="index.html">INICIO</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="servicios.html">SERVICIOS</a>
+                <a href="contactanos.html">CONTACTANOS</a>
+            </div>
+
+            <div class="header-menu" id="menu2">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+        </header>
+        <main>
+            <!-- Inicio de la portada -->
+            <section class="container_portada">
+                <div class="background">
+                    <div class="background_textura">
+                        <div class="portada active">
+                            <div class="left-content">
+                                <p class="stay-home">BIENVENIDOS!!</p>
+                                <h1>DQ & ASOCIADOS</h1>
+                                <p class="para">
+                                    ASESORIA CONTABLE TRIBUTARIOS Y FINANCIEROS
+                                </p>
+                                <a href="nosotros.html"><button >SORBRE
+                                        NOSOTROS</button></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="footer-logo">
-                        <img src="img/logo.png" alt="">
+                </div>
+                <div class="background">
+                    <div class="background_textura">
+                        <div class="portada active">
+                            <div class="left-content">
+                                <p class="stay-home">SERVICIOS!!</p>
+                                <h1>DQ & ASOCIADOS</h1>
+                                <p class="para">
+                                    SOMOS UNA EMPRESA CON EXPERIENCIA EN EL
+                                    MERCADO
+                                    Y
+                                    NÚMERO UNO CON NUESTROS SERVICIOS
+                                </p>
+                                <button>SERVICIOS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background">
+                    <div class="background_textura">
+                        <div class="portada active">
+                            <div class="left-content">
+                                <p class="stay-home">CONTACTENOS!!</p>
+                                <h1>DQ & ASOCIADOS</h1>
+                                <p class="para">
+                                    PUEDE PONERSE EN CONTACTO CON NOSOTROS A
+                                    TRAVÉS
+                                    DE.....
+                                </p>
+                                <button>CONTÁCTENOS</button>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                <div class="footer-links">
-                    <h4>NOS ENCUENTRAS EN:</h4>
-                    <ul>
-
-                        <li><a href="#"> <i class="fa-solid fa-phone icon"></i>998855444</a></li>
-                        <li><a href="#"> <i class="fa-solid fa-envelope icon"></i>declarafacil@dqyasociados.com.pe</a>
-                        </li>
-                    </ul>
+                <div class="navegacion">
+                    <span class="prev"><img
+                            src="img/arrows/left-arrow-portada.svg"></span>
+                    <span class="next"><img
+                            src="img/arrows/right-arrow-portada.svg"></span>
                 </div>
-                <div class="footer-links">
-                    <h4>NUESTROS SERVICIOS:</h4>
-                    <ul>
-                        <li><a href="servicios.html ">Nueva Fiscalización Sunat</a></li>
-                        <li><a href="servicios.html">Devolución de impuestos</a></li>
-                        <li><a href="servicios.html">Defensa en fiscalización SUNAFIL</a></li>
-                        <li><a href="servicios.html">Servicios Tributarios</a></li>
-                        <li><a href="servicios.html">Servicios Contables</a></li>
-                        <li><a href="servicios.html">Levantamiento de embargos y cobranzas coactivas</a></li>
-                        <li><a href="servicios.html">Elaboración de reclamos ante SUNAT y el tribunal fiscal</a>
-                        </li>
-                    </ul>
+                <div class="puntos">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+            <!-- Fin de la portada -->
+            <!-- Inicio de la seccion Nosotros del Index -->
+            <section class="container_nosotros">
+                <div class="nosotros_desing">
+                    <div class="nosotros-left-content">
+                        <h2>
+                            SOBRE NOSOTROS
+                        </h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                            Nesciunt in expedita ducimus, recusandae unde
+                            tempora
+                            iusto illum eius culpa esse dolores, sunt odit modi
+                            dolore distinctio! Saepe reprehenderit nemo porro.
+                        </p>
+                        <a href="nosotros.html">
+                            Ver más
+                        </a>
+
+                    </div>
+                    <div class="nosotros-right-content">
+                        <img src="img/nosotros-img.webp" alt>
+                    </div>
+                </div>
+            </section>
+            <!-- Fin de la seccion Nosotros del Index -->
+            <!-- Inicio de la seccion Servicios  -->
+            <section class="container_servicios">
+                <div class="container_top">
+                    <div class="tittle_servicios">
+                        <h3>SERVICIOS:</h3>
+                    </div>
+                    <div class="navegacion_servicios">
+                        <span class="prev_serv"><img
+                                src="img/arrows/left-arrow-servicios.svg"></span>
+                        <span class="next_serv"><img
+                                src="img/arrows/right-arrow-servicios.svg"></span>
+                    </div>
+                </div>
+
+                <div class="container_cards">
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Nueva Fiscalización Sunat.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Nueva Fiscalización Sunat </h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img src="img/servicios/defensa sunafil.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Defensa en fiscalización SUNAFIL </h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Servicios Tributarios.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Servicios Tributarios</h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Servicios Contables.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Servicios Contables </h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Levantamiento de embargos y cobranzas coactivas.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Levantamiento de embargos y cobranzas
+                                    coactivas</h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Elaboración de reclamos ante SUNAT y el tribunal fiscal.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Elaboración de reclamos ante SUNAT y el
+                                    tribunal fiscal </h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicios_card">
+                        <div class="card">
+                            <div class="card_above">
+                                <img
+                                    src="img/servicios/Devolución de impuestos.webp"
+                                    alt>
+                            </div>
+                            <div class="below">
+                                <h5>Devolución de impuestos</h5>
+                                <a href="servicios.html" class="below_link">
+                                    <p>Ver más</p>
+                                    <img
+                                        src="img/arrows/arrow-card-servicios.svg"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- Fin de la seccion Servicios -->
+            <!-- Inicio del formulario contactanos del Index -->
+            <!-- <section class="container_contactanos">
+                <div class="contactanos_design">
+                    <div class="left_formulario">
+
+                    </div>
+                    <div class="right_logo">
+                        <img src alt>
+                    </div>
+
+                </div>
+            </section> -->
+            <!-- Fin del formulario contactanos del Index -->
+
+        </main>
+        <footer>
+            <div class="container_footer">
+                <div class="footer_design">
+                    <div class="footer-links">
+                        <h4>SIGUENOS EN NUESTRAS REDES:</h4>
+                        <div class="social-link">
+                            <img src="img/icons/facebook.svg" height="24px"
+                                width="24px">
+                            <img src="img/icons/instagram.svg" height="24px"
+                                width="24px">
+                            <img src="img/icons/twitter.svg" height="24px"
+                                width="24px">
+                            <img src="img/icons/linkedin.svg" height="24px"
+                                width="24px">
+
+                        </div>
+                        <div class="footer_logo">
+                            <img src="img/logo.png" alt>
+                        </div>
+
+                    </div>
+                    <div class="footer-links">
+                        <h4>CONTACTO:</h4>
+                        <ul style="list-style-type: none;">
+                            <li><a href="#"> <img src="img/icons/phone.svg"
+                                        alt>998855444</a></li>
+                            <li><a href="#"> <img src="img/icons/email.svg"
+                                        alt>declarafacil@dqyasociados.com.pe</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>NUESTROS SERVICIOS:</h4>
+                        <ul>
+                            <li><a href="servicios.html ">Nueva Fiscalización
+                                    Sunat</a></li>
+                            <li><a href="servicios.html">Devolución de
+                                    impuestos</a></li>
+                            <li><a href="servicios.html">Defensa en
+                                    fiscalización SUNAFIL</a></li>
+                            <li><a href="servicios.html">Servicios
+                                    Tributarios</a></li>
+                            <li><a href="servicios.html">Servicios
+                                    Contables</a></li>
+                            <li><a href="servicios.html">Levantamiento de
+                                    embargos y cobranzas coactivas</a></li>
+                            <li><a href="servicios.html">Elaboración de reclamos
+                                    ante SUNAT y el tribunal fiscal</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <footer class="footer2">
-            <article class="derechos">
-                <h3>© 2023 ©DQ&ASOCIADOS. Todos los Derechos Reservados</h3>
-            </article>
+            <div class="footer_derechos">
+                <p> Copyright © 2024, DQ&ASOCIADOS. Todos los derechos
+                    reservados
+                </p>
+
+            </div>
 
         </footer>
-    </footer>
-
-</body>
-
+    </body>
 </html>
