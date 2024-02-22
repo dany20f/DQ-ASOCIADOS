@@ -117,31 +117,31 @@ main {
   position: absolute;
   transform: translateX(-100%);
   transition: transform 1.2s ease-in-out;
-
-}
-
-.portada_slide {
-  width: 100%;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Para mejorar el desplazamiento en iOS */
-  scroll-behavior: smooth; /* Para un desplazamiento suave */
+  -webkit-overflow-scrolling: touch;
+  /* Para mejorar el desplazamiento en iOS */
+  scroll-behavior: smooth;
+}
+
+.background {
+  scroll-snap-align: start;
 }
 
 .background:nth-child(1) {
   background-image: url(../img/portadas/portada-dq.webp);
   transform: translateX(0);
-  scroll-snap-align: start;
+
 }
 
 .background:nth-child(2) {
   background-image: url(../img/portadas/portada-servicios.webp);
-  scroll-snap-align: start;
+
 }
 
 .background:nth-child(3) {
   background-image: url(../img/portadas/portada-nosotros.webp);
-  scroll-snap-align: start;
+
 }
 
 .background_textura {
