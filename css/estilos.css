@@ -118,11 +118,6 @@ main {
   transform: translateX(-100%);
   transition: transform 1.2s ease-in-out;
 
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  /* Para mejorar el desplazamiento en iOS */
-  scroll-behavior: smooth;
 }
 
 .background:nth-child(1) {
@@ -147,6 +142,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Para mejorar el desplazamiento en iOS */
+  scroll-behavior: smooth;
 }
 
 .portada {
