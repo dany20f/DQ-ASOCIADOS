@@ -218,3 +218,28 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Funcion PARA EL CANBIO AUTOMATICO DEL COPYRIGHT
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener el elemento del pie de página
+var copyrightElement = document.getElementById("copyright");
+
+// Obtener el año actual
+var changeYear = new Date().getFullYear();
+
+// Actualizar el contenido del pie de página con el año actual
+copyrightElement.textContent = "Copyright © " + changeYear + ", DQ&ASOCIADOS. Todos los derechos reservados";
+
+});

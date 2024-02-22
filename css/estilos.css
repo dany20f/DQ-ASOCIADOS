@@ -368,6 +368,10 @@ main .container_nosotros {
   white-space: nowrap;
   padding: 1rem;
   position: relative;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Para mejorar el desplazamiento en iOS */
+  scroll-behavior: smooth; /* Para un desplazamiento suave */
 
 }
 
@@ -377,6 +381,7 @@ main .container_nosotros {
   margin-right: 1rem;
   transition: transform 0.3s ease;
   overflow-wrap: break-word;
+  scroll-snap-align: start;
 }
 
 .servicios_card.hidden {
