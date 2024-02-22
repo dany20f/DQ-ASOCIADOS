@@ -120,17 +120,28 @@ main {
 
 }
 
+.portada_slide {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Para mejorar el desplazamiento en iOS */
+  scroll-behavior: smooth; /* Para un desplazamiento suave */
+}
+
 .background:nth-child(1) {
   background-image: url(../img/portadas/portada-dq.webp);
   transform: translateX(0);
+  scroll-snap-align: start;
 }
 
 .background:nth-child(2) {
   background-image: url(../img/portadas/portada-servicios.webp);
+  scroll-snap-align: start;
 }
 
 .background:nth-child(3) {
-  background-image: url(../img/portadas/portada-nosotros.webp)
+  background-image: url(../img/portadas/portada-nosotros.webp);
+  scroll-snap-align: start;
 }
 
 .background_textura {
@@ -154,7 +165,7 @@ main {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  scroll-snap-align: start; 
+  scroll-snap-align: start;
 
 }
 
@@ -376,8 +387,10 @@ main .container_nosotros {
   position: relative;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Para mejorar el desplazamiento en iOS */
-  scroll-behavior: smooth; /* Para un desplazamiento suave */
+  -webkit-overflow-scrolling: touch;
+  /* Para mejorar el desplazamiento en iOS */
+  scroll-behavior: smooth;
+  /* Para un desplazamiento suave */
 
 }
 
@@ -482,7 +495,7 @@ main .container_nosotros {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
- align-items: center;
+  align-items: center;
 }
 
 .footer-links h4 {
