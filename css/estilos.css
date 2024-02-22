@@ -89,7 +89,6 @@ main {
   height: 90vh;
   max-height: 800px;
   position: relative;
-  overflow: hidden;
   opacity: 0;
   animation: fadeIn 0.8s ease-in forwards;
   overflow-x: scroll;
