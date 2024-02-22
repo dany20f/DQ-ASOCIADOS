@@ -92,7 +92,7 @@ main {
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 0.8s ease-in forwards;
-  
+
 }
 
 @keyframes fadeIn {
@@ -276,7 +276,7 @@ main .container_nosotros {
 
 .nosotros-left-content h2 {
   text-align: center;
-  font-size:clamp(1rem, 10vw, 2.7rem);
+  font-size: clamp(1rem, 10vw, 2.7rem);
   border-bottom: 3px solid red;
   line-height: 3rem;
 
@@ -368,13 +368,14 @@ main .container_nosotros {
   max-width: 80vw;
   overflow-x: hidden;
   white-space: nowrap;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
+
 }
 
 .servicios_card {
   display: inline-block;
-  width: 300px;
+  width: clamp(10rem, 20vw, 20rem);
   margin-right: 1rem;
   transition: transform 0.3s ease;
   overflow-wrap: break-word;
@@ -391,7 +392,7 @@ main .container_nosotros {
 }
 
 .card_above {
-  height: 200px;
+  height: clamp(7rem, 20vh, 10rem);
   overflow: hidden;
 }
 
@@ -402,7 +403,7 @@ main .container_nosotros {
 }
 
 .below {
-  height: clamp(1rem, 40vh, 10rem);
+  height: clamp(7rem, 20vh, 10rem);
   padding: 1rem;
   white-space: normal;
   position: relative;
@@ -429,10 +430,11 @@ main .container_nosotros {
 
 .below_link p {
   height: 1.5rem;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
   color: #000000;
   display: grid;
   place-items: center;
+
 }
 
 .below_link p:hover {
@@ -442,7 +444,8 @@ main .container_nosotros {
 .below_link img {
   width: 1.3rem;
   height: 1.3rem;
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
+  
 }
 
 /* Fin de la seccion Servicios  */
@@ -456,12 +459,13 @@ main .container_nosotros {
   margin-top: 2rem;
 
 }
+
 .footer_design {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 0rem;
- 
+
 }
 
 .footer-links {
@@ -474,7 +478,7 @@ main .container_nosotros {
 }
 
 .footer-links h4 {
-  font-size:clamp(0.5rem, 5vw, 1.4rem);
+  font-size: clamp(0.7rem, 4vw, 1.4rem);
   color: rgb(0, 0, 0);
   margin-bottom: 25px;
   font-weight: 500;
@@ -484,7 +488,7 @@ main .container_nosotros {
 }
 
 .footer-links ul li a {
-  font-size: clamp(0.9rem, 10vw, 1.2rem);
+  font-size: clamp(0.5rem, 4.2vw, 1.2rem);
   text-decoration: none;
   color: #000000;
   display: block;

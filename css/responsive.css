@@ -39,7 +39,7 @@
     }
 
     .footer_design>.footer-links:nth-child(3) ul {
-        margin-left: 2rem;
+        margin-left: 13%;
 
     }
 }
@@ -158,6 +158,10 @@
         /* Para un desplazamiento suave */
     }
 
+    .navegacion {
+        display: none;
+    }
+
     .portada {
 
         display: flex;
@@ -173,6 +177,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .para {
+        padding: 1rem;
     }
 
     .left-content .stay-home {
@@ -252,18 +260,33 @@
         margin-left: 1%;
     }
 
+    .navegacion_servicios {
+        display: none;
+    }
+
     .container_cards {
         max-width: 98vw;
         padding: 0.5rem;
 
     }
 
-    .servicios_card {
-        width: 240px;
+    .card_above {
+        height: clamp(5rem, 15vh, 10rem);
+        overflow: hidden;
     }
 
+    .below {
+        height: clamp(7rem, 14vh, 8rem);
+        padding: 0.7rem;
+    }
+    .below h5 {
+        font-size: clamp(0.3rem, 5vw, 1rem);
+       
+    }
+    .below_link p {
+        font-size: clamp(0.8rem, 5vw, 1rem);
     /* Fin de la Seccion Servicios del Index */
-
+    }
 
 }
 
