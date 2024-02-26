@@ -64,10 +64,11 @@ header .header-links {
   text-decoration: none;
   margin: 10px;
   border-bottom: 2px solid transparent;
+  font-weight: bold;
 }
 
 .header-links a:hover {
-  color: rgb(255, 0, 0);
+  color: rgba(0, 0, 255, 0.795);
 }
 
 .header-links a.active {
@@ -92,11 +93,7 @@ main {
   overflow: hidden;
   opacity: 0;
   animation: fadeIn 0.8s ease-in forwards;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  /* Para mejorar el desplazamiento en iOS */
-  scroll-behavior: smooth;
+
 }
 
 @keyframes fadeIn {
@@ -123,7 +120,6 @@ main {
   transform: translateX(-100%);
   transition: transform 1.2s ease-in-out;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .background:nth-child(1) {
@@ -272,7 +268,7 @@ main .container_nosotros {
   padding: 5%;
 }
 
-.nosotros-left-content {
+.nosotros-left-content_index {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -282,21 +278,21 @@ main .container_nosotros {
 
 }
 
-.nosotros-left-content h2 {
+.nosotros-left-content_index h2 {
   text-align: center;
-  font-size: clamp(1rem, 4vw, 2.7rem);
+  font-size: clamp(1.6rem, 5vw, 2.7rem);
   border-bottom: 3px solid red;
   line-height: 3rem;
 
 }
 
-.nosotros-left-content p {
+.nosotros-left-content_index p {
   font-size: clamp(1rem, 5vw, 1.3rem);
   padding: 7%;
 
 }
 
-.nosotros-left-content a {
+.nosotros-left-content_index a {
   background-color: #ff0303;
   height: 3rem;
   width: 8rem;
@@ -310,18 +306,18 @@ main .container_nosotros {
 
 }
 
-.nosotros-left-content a:hover {
+.nosotros-left-content_index a:hover {
   background-color: #ff0000d0;
 }
 
-.nosotros-right-content {
+.nosotros-right-content_index {
   width: 40%;
   display: grid;
   place-items: center;
 
 }
 
-.nosotros-right-content img {
+.nosotros-right-content_index img {
   width: clamp(250px, 30vw, 800px);
   height: clamp(200px, 20vw, 600px);
 
@@ -378,22 +374,17 @@ main .container_nosotros {
   white-space: nowrap;
   padding: 1rem;
   position: relative;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  /* Para mejorar el desplazamiento en iOS */
-  scroll-behavior: smooth;
-  /* Para un desplazamiento suave */
+
 
 }
 
 .servicios_card {
   display: inline-block;
-  width: clamp(10rem, 20vw, 20rem);
+  width: clamp(17rem, 20vw, 20rem);
   margin-right: 1rem;
   transition: transform 0.3s ease;
   overflow-wrap: break-word;
-  scroll-snap-align: start;
+
 }
 
 .servicios_card.hidden {
@@ -492,7 +483,7 @@ main .container_nosotros {
 }
 
 .footer-links h4 {
-  font-size: clamp(0.7rem, 4vw, 1.4rem);
+  font-size: clamp(0.7rem, 5vw, 1.4rem);
   color: rgb(0, 0, 0);
   margin-bottom: 25px;
   font-weight: 500;

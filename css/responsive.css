@@ -75,14 +75,14 @@
         margin-bottom: 2rem;
 
     }
-    
+
     .footer_design>.footer-links:nth-child(3) ul {
         margin-left: 13%;
 
     }
 }
 
-/* --------------------Menu Desplegable Moviles---------------------- */
+/* --------------------Menu Desplegable Moviles y Tablets---------------------- */
 @media only screen and (max-width: 1023px) {
     .header-links {
         position: absolute;
@@ -100,17 +100,12 @@
 
     .header-links a {
         padding: 1rem;
-        color: blue;
+        color: rgb(0, 0, 255);
         text-decoration: none;
         margin: 0;
         padding-left: 1.5rem;
 
     }
-
-    .header-links a:hover {
-        background: rgb(239, 255, 8);
-    }
-
 
     .header-links a.active {
         color: #ff0000;
@@ -170,12 +165,8 @@
     }
 
     .background {
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        /* Para mejorar el desplazamiento en iOS */
-        scroll-behavior: smooth;
-        /* Para un desplazamiento suave */
+
+        scroll-snap-align: start;
     }
 
     .navegacion {
@@ -232,42 +223,46 @@
     /* Fin de la Portada del Index */
     /* Inicio de la Seccion Sobre Nosotros del Index */
     .nosotros_desing {
-        height: 48rem;
+        height: 40rem;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         position: relative;
+
     }
 
-    .nosotros-left-content {
-        width: 60vw;
+    .nosotros-left-content_index {
+        width: 100vw;
         position: relative;
     }
 
-    .nosotros-left-content h2 {
+    .nosotros-left-content_index h2 {
         font-size: clamp(1.1rem, 6vw, 1.4rem);
         position: absolute;
-        bottom: 16rem;
+        bottom: 15rem;
     }
 
     /* -------------------------SOS---------------------------- */
     /* Ajustar el contenedor del texto para que no se acorte a un ancho estatico */
-    .nosotros-left-content p {
+
+    .nosotros-left-content_index p {
         position: absolute;
-        top: -1rem;
+        top: 1rem;
         text-align: justify;
+
     }
 
-    .nosotros-left-content a {
+    .nosotros-left-content_index a {
         position: absolute;
-        top: 20rem;
+        top: 15rem;
     }
 
-    .nosotros-right-content {
-        width: 70vw;
+    .nosotros-right-content_index {
+        width: 100vw;
         position: absolute;
-        top: 150px;
+        top: 7rem;
     }
 
     /* Fin de la Seccion Sobre Nosotros del Index */
@@ -288,6 +283,19 @@
     .container_cards {
         max-width: 100vw;
         padding: 0.5rem;
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        /* Para mejorar el desplazamiento en iOS */
+        scroll-behavior: smooth;
+        /* Para un desplazamiento suave */
+
+    }
+
+    .servicios_card {
+        width: clamp(7rem, 100vw, 10rem);
+        scroll-snap-align: start;
     }
 
     .card_above {
@@ -296,12 +304,12 @@
     }
 
     .below {
-        height: clamp(7rem, 16vh, 10rem);
+        height: clamp(8rem, 20vh, 12rem);
         padding: 0.7rem;
     }
 
     .below h5 {
-        font-size: clamp(0.3rem, 5vw, 1rem);
+        font-size: clamp(0.3rem, 4vw, 1rem);
 
     }
 
@@ -318,6 +326,7 @@
 
     main {
         margin-top: 3rem;
+        width: 100vw;
     }
 
     /* Inicio de la Portada del Index */
@@ -342,22 +351,180 @@
 
     /* Fin de la Portada del Index */
     /* -------------Inicio de la Seccion Sobre Nosotros del Index----------- */
+    .nosotros-left-content_index h2 {
+        font-size: clamp(1.5rem, 10vw, 2.1rem);
+
+    }
+
     /* FIN de la Seccion Sobre Nosotros del Index */
     /* --------------Inicio de la seccion Servicios----------  */
 
     .container_cards {
         padding: 0.5rem;
-
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        /* Para mejorar el desplazamiento en iOS */
+        scroll-behavior: smooth;
+        /* Para un desplazamiento suave */
     }
-
-    /* *************REVISAR LA VISTA MOVIL EN HORIZONTAL************** */
-    .servicios_card {
-        width: 15rem;
-        width: clamp(14rem, 25vw, 17rem);
-    }
-
-    /* Fin de la seccion Servicios */
 }
+
+/* *************REVISAR LA VISTA MOVIL EN HORIZONTAL************** */
+
 
 
 /* -----------------------FIN DEL Media queries DEL INDEX---------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+/* -----------------------INICIO DEL Media queries DE NOSOTROS---------------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+
+    /* ---------------INICIO de la seccion NOSOTROS "Nosotros"----------------  */
+    .pc-style {
+        display: none;
+    }
+
+    .movil-style {
+        display: block !important;
+
+    }
+
+    .nosotros-content {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        row-gap: 1.5rem;
+        border: 3px solid rgb(0, 0, 0);
+        padding: 3rem 1rem;
+    }
+
+    .nosotros-content h2 {
+        color: #0000ff;
+        font-size: clamp(1.5rem, 10vw, 2rem);
+
+    }
+
+    .nosotros-content h2 span {
+        color: rgb(255, 0, 0);
+    }
+
+    .nosotros-content img {
+        width: 70vw;
+        height: clamp(8rem, 40vh, 12rem);
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    .nosotros-content p {
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+
+    /* FIN de la seccion NOSOTROS "Nosotros"  */
+    /* ---------------Inicio de la seccion MISION Y VISION "Nosotros"---------------  */
+    .mision_vision_design {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+    }
+
+    .mision,
+    .vision {
+        width: 70vw;
+
+    }
+
+
+
+
+    /* FIN de la seccion MISION Y VISION "Nosotros"  */
+    /* ---------------Inicio de la seccion Valores "Nosotros"---------------  */
+
+    .valores_content {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+    }
+
+    .valores_content {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+    }
+
+    .valores-left-content,
+    .content_right_valores {
+        width: 70vw;
+
+    }
+
+    .valores-left-content img {
+        width: 60vw;
+        height: 30vh;
+    }
+
+    .valores_tittle {
+        width: 65vw;
+        margin-left: 1.5rem;
+    }
+
+    .valores_concept {
+        width: 65vw;
+        padding: 0rem 1rem;
+
+    }
+
+    /* FIN de la seccion Valores "Nosotros" */
+    /* Inicio de la seccion Por que elejirnos "Nosotros" */
+    .container_elegirnos {
+        width: 100vw;
+    }
+
+    .elegirnos_desing {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+    }
+
+    .left_elejirnos {
+        width: 90vw;
+
+        & .reason {
+            width: 80vw;
+
+        }
+    }
+
+    .right_elejirnos {
+        width: 90vw;
+
+        & .contactos_elejirnos {
+            width: 80vw;
+
+        }
+
+        .contactos_elejirnos p {
+            font-size: 1rem;
+            line-height: 1.7rem
+        }
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        width: 100vw;
+    }
+}
+
+/* FIN de la seccion Por que elejirnos "Nosotros" */

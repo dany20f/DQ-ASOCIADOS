@@ -23,110 +23,112 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // PORTADA
 document.addEventListener("DOMContentLoaded", function () {
-    const portadas = document.querySelectorAll('.background');
-    const puntos = document.querySelectorAll('.puntos .dot');
-    let index = 0;
-    let intervalId;
-    let timerId;
-    const inactividadDelay = 10000;
-    let portadaVisible = true;
+  const portadas = document.querySelectorAll('.background');
+  const puntos = document.querySelectorAll('.puntos .dot');
+  let index = 0;
+  let intervalId;
+  let timerId;
+  const inactividadDelay = 1200000;
+  let portadaVisible = true;
 
-    mostrarPortada(0);
-    autoCambioPortada();
-    iniciarTemporizadorInactividad();
+  mostrarPortada(0);
+  autoCambioPortada();
+  iniciarTemporizadorInactividad();
 
-    function mostrarPortada(index) {
-        portadas.forEach((portada, i) => {
-            if (i === index) {
-                portada.style.transform = 'translateX(0)';
-            } else if (i < index) {
-                portada.style.transform = 'translateX(-100%)';
-            } else {
-                portada.style.transform = 'translateX(100%)';
-            }
-        });
-        puntos.forEach((punto, puntoIndex) => {
-            punto.classList.toggle('active-dot', puntoIndex === index);
-        });
-    }
+  function mostrarPortada(index) {
+      portadas.forEach((portada, i) => {
+          if (i === index) {
+              portada.style.transform = 'translateX(0)';
+          } else if (i < index) {
+              portada.style.transform = 'translateX(-100%)';
+          } else {
+              portada.style.transform = 'translateX(100%)';
+          }
+      });
+      puntos.forEach((punto, puntoIndex) => {
+          punto.classList.toggle('active-dot', puntoIndex === index);
+      });
+  }
 
-    function siguientePortada() {
-        index = (index + 1) % portadas.length;
-        if (index === 0) {
-            portadas.forEach((portada) => {
-                portada.style.transform = 'translateX(0)';
-            });
-        }
-        mostrarPortada(index);
-    }
+  function siguientePortada() {
+      index = (index + 1) % portadas.length;
+      if (index === 0) {
+          portadas.forEach((portada) => {
+              portada.style.transform = 'translateX(0)';
+          });
+      }
+      mostrarPortada(index);
+  }
 
-    function anteriorPortada() {
-        index = (index - 1 + portadas.length) % portadas.length;
-        mostrarPortada(index);
-    }
+  function anteriorPortada() {
+      index = (index - 1 + portadas.length) % portadas.length;
+      mostrarPortada(index);
+  }
 
-    function autoCambioPortada() {
-        intervalId = setInterval(siguientePortada, 50000);
-    }
+  function autoCambioPortada() {
+      intervalId = setInterval(siguientePortada, 100000);
+  }
 
-    function iniciarTemporizadorInactividad() {
-        clearTimeout(timerId);
-        timerId = setTimeout(function () {
-            clearInterval(intervalId);
-            siguientePortada();
-            autoCambioPortada();
-        }, inactividadDelay);
-    }
+  function iniciarTemporizadorInactividad() {
+      clearTimeout(timerId);
+      timerId = setTimeout(function () {
+          clearInterval(intervalId);
+          siguientePortada();
+          autoCambioPortada();
+      }, inactividadDelay);
+  }
 
-    function verificarPortadaVisible() {
-        portadaVisible = isInViewport(portadas[index]);
-        if (!portadaVisible) {
-            clearInterval(intervalId);
-        } else {
-            autoCambioPortada();
-        }
-    }
+  function verificarPortadaVisible() {
+      portadaVisible = isInViewport(portadas[index]);
+      if (!portadaVisible) {
+          clearInterval(intervalId);
+      } else {
+          autoCambioPortada();
+      }
+  }
 
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+  function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
 
-    document.querySelector('.prev').addEventListener('click', function () {
-        clearInterval(intervalId);
-        anteriorPortada();
-        iniciarTemporizadorInactividad();
-    });
+  document.querySelector('.prev').addEventListener('click', function () {
+      clearInterval(intervalId);
+      anteriorPortada();
+      iniciarTemporizadorInactividad();
+  });
 
-    document.querySelector('.next').addEventListener('click', function () {
-        clearInterval(intervalId);
-        siguientePortada();
-        iniciarTemporizadorInactividad();
-    });
+  document.querySelector('.next').addEventListener('click', function () {
+      clearInterval(intervalId);
+      siguientePortada();
+      iniciarTemporizadorInactividad();
+  });
 
-    puntos.forEach((punto, puntoIndex) => {
-        punto.addEventListener('click', function () {
-            clearInterval(intervalId);
-            index = puntoIndex;
-            mostrarPortada(index);
-            iniciarTemporizadorInactividad();
-        });
-    });
+  puntos.forEach((punto, puntoIndex) => {
+      punto.addEventListener('click', function () {
+          clearInterval(intervalId);
+          index = puntoIndex;
+          mostrarPortada(index);
+          iniciarTemporizadorInactividad();
+      });
+  });
 
-    document.addEventListener('mousemove', function () {
-        clearTimeout(timerId);
-        iniciarTemporizadorInactividad();
-    });
+  document.addEventListener('mousemove', function () {
+      clearTimeout(timerId);
+      iniciarTemporizadorInactividad();
+  });
 
-    window.addEventListener('scroll', function () {
-        verificarPortadaVisible();
-    });
+  window.addEventListener('scroll', function () {
+      verificarPortadaVisible();
+  });
 });
+
+  
 // SERVICIOS_INDEX
 
 document.addEventListener("DOMContentLoaded", function () {
