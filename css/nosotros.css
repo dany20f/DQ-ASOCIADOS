@@ -71,6 +71,7 @@ header .header-links {
 main {
     margin-top: 4rem;
     max-width: 2500px;
+
 }
 
 .container_nosotros {
@@ -314,27 +315,26 @@ main {
 /* Fin de los Valores*/
 /* INICIO DE POR QUE ELEJIRNOS */
 .container_elegirnos {
-    max-width: 2500px;
-    height: auto;
     margin: 0;
     padding: 2rem;
-    display: flex;
-    justify-content: center;
-    background: #f3f2f2;
+    display: grid;
+    place-items: center;
 }
 
 .elegirnos_desing {
     width: 100vw;
-    max-width: 1500px;
+    max-width: 2500px;
     margin: 1rem;
     text-align: center;
     display: flex;
     justify-content: space-around;
+
+
 }
 
 .left_elejirnos {
     width: 40vw;
-    max-width: 500px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -348,12 +348,14 @@ main {
 
 .reason {
     width: 40vw;
+    max-width: 600px;
     padding: 1rem;
     text-align: justify;
 }
 
 .reason p {
-    font-size: clamp(1rem, 5vw, 1.7rem);
+    font-size: clamp(1rem, 1vw, 1.7rem);
+    overflow: hidden;
 }
 
 .right_elejirnos {
