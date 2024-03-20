@@ -151,8 +151,9 @@
 }
 
 /* -------------------------------------------------------------------------------------------*/
+/* -----------------------INICIO DEL Media queries de la Pagina INDEX-------------------------*/
 /* -------------------------------------------------------------------------------------------*/
-/* -----------------------INICIO DEL Media queries DEL INDEX---------------------------------------------*/
+
 @media only screen and (max-width: 767px) {
     main {
         margin-top: 3rem;
@@ -239,7 +240,7 @@
     }
 
     .nosotros-left-content_index h2 {
-        font-size: clamp(1.1rem, 6vw, 1.4rem);
+        font-size: clamp(1.1rem, 20vw, 1.4rem);
         position: absolute;
         bottom: 15rem;
     }
@@ -372,57 +373,74 @@
 
 /* *************REVISAR LA VISTA MOVIL EN HORIZONTAL************** */
 
+/* -------------------------------------------------------------------------------------------*/
+/* -----------------------FIN DEL Media queries de la Pagina INDEX----------------------------*/
+/* -------------------------------------------------------------------------------------------*/
 
 
-/* -----------------------FIN DEL Media queries DEL INDEX---------------------------------------------*/
+
+
+
 
 /* -------------------------------------------------------------------------------------------*/
+/* -----------------------INCIO DEL Media queries de la pagina NOSOTROS-----------------------*/
 /* -------------------------------------------------------------------------------------------*/
-/* -----------------------INICIO DEL Media queries DE NOSOTROS---------------------------------------------*/
 
+
+/* VISTA MOVIL */
 @media only screen and (max-width: 767px) {
 
     /* ---------------INICIO de la seccion NOSOTROS "Nosotros"----------------  */
     .pc-style {
         display: none;
+        /* PARA OCULTAR EL pc-style en los dispositivos moviles */
+    }
+
+    .container_nosotros {
+        width: 100vw;
+        height: auto;
+        display: grid;
+        place-items: center;
     }
 
     .movil-style {
         display: block !important;
 
+        & .movile-style-content {
+            display: grid;
+            place-items: center;
+            border: 2px solid black;
+            padding: 1rem 0;
+
+            & h2 {
+                color: rgb(0, 0, 255);
+                font-size: clamp(1.5rem, 10vw, 2rem);
+                margin-bottom: 1rem;
+            }
+
+            & h2 span {
+                color: rgb(255, 0, 0);
+            }
+
+            & img {
+                width: 70vw;
+                height: clamp(8rem, 40vh, 12rem);
+                border: 2px solid rgb(0, 0, 0);
+            }
+
+
+
+            & p {
+                padding: 2rem;
+                font-size: 1.2rem;
+                text-align: justify;
+
+            }
+
+        }
     }
 
-    .nosotros-content {
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        place-items: center;
-        row-gap: 1.5rem;
-        border: 3px solid rgb(0, 0, 0);
-        padding: 3rem 1rem;
-    }
 
-    .nosotros-content h2 {
-        color: #0000ff;
-        font-size: clamp(1.5rem, 10vw, 2rem);
-
-    }
-
-    .nosotros-content h2 span {
-        color: rgb(255, 0, 0);
-    }
-
-    .nosotros-content img {
-        width: 70vw;
-        height: clamp(8rem, 40vh, 12rem);
-        border: 2px solid rgb(0, 0, 0);
-    }
-
-    .nosotros-content p {
-        padding: 1rem;
-        font-size: 1.2rem;
-        text-align: justify;
-    }
 
 
     /* FIN de la seccion NOSOTROS "Nosotros"  */
@@ -487,21 +505,24 @@
     /* Inicio de la seccion Por que elejirnos "Nosotros" */
     .container_elegirnos {
         width: 100vw;
+        padding: 2rem 0;
+
     }
 
     .elegirnos_desing {
+        margin: 0;
         display: flex;
         flex-direction: column;
-        place-items: center;
+        justify-content: center;
+        align-items: center;
 
     }
 
     .left_elejirnos {
-        width: 90vw;
+        width: 100vw;
 
         & .reason {
-            width: 80vw;
-
+            width: 80%;
         }
     }
 
@@ -514,6 +535,7 @@
         }
 
         .contactos_elejirnos p {
+            margin-left: 1rem;
             font-size: 1rem;
             line-height: 1.7rem
         }
@@ -521,10 +543,136 @@
     }
 }
 
+/* VISTA TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     main {
         width: 100vw;
     }
+
+    .container_nosotros {
+        background-color: #0000ff;
+
+        & .pc-style {
+            background-color: #ff0000;
+        }
+    }
 }
 
 /* FIN de la seccion Por que elejirnos "Nosotros" */
+
+
+/* -------------------------------------------------------------------------------------------*/
+/* -----------------------FIN DEL Media queries de la pagina NOSOTROS-------------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+
+
+
+/* -------------------------------------------------------------------------------------------*/
+/* ---------------------INICIO DEL Media queries de la pagina SERVICIOS-----------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+/* VISTA MOVIL */
+@media only screen and (max-width: 767px) {
+
+
+    /* .contenedor-servicios {
+     
+
+        & .tittle {
+            & h2 {
+                font-size:  2rem;
+            }
+
+            & span {
+                font-size: 2rem;
+
+            }
+        }
+
+        & .section-servicios {
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            row-gap: 1.5rem;
+
+            & .img-servicios {
+                height: auto;
+                width: 80%;
+                height: 10rem;
+                overflow: hidden;
+                border-radius: 50% 50% 0 0;
+            }
+
+            .contenedor-texto {
+                width: 100%;
+
+                & .texto-servicios {
+                    display: grid;
+                    place-items: center;
+                    row-gap: 1rem;
+
+                    & h2 {
+                        font-size: clamp(1rem, 20vw, 1.5rem);
+                        text-align: center;
+                        line-height: normal;
+                    }
+
+                    & p {
+                        width: 80%;
+                        font-size: 1.2rem;
+                        text-align: justify;
+
+                    }
+                }
+            }
+
+        }
+
+        & .section-servicios:nth-child(odd) {
+
+
+            & .img-servicios {
+                order: 1;
+
+            }
+
+            & .contenedor-texto {
+                order: 2;
+            }
+        }
+
+
+
+    } */
+
+}
+
+/* VISTA TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+
+/* -------------------------------------------------------------------------------------------*/
+/* ------------------------FIN DEL Media queries de la pagina SERVICIOS-----------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------*/
+/* -----------------------INICIO DEL Media queries de la pagina CONTACTANOS-------------------*/
+/* -------------------------------------------------------------------------------------------*/
+
+/* VISTA MOVIL */
+@media only screen and (max-width: 767px) {}
+
+
+
+
+/* -------------------------------------------------------------------------------------------*/
+/* ------------------------FIN DEL Media queries de la pagina CONTACTANOS---------------------*/
+/* -------------------------------------------------------------------------------------------*/

@@ -79,35 +79,60 @@ main {
 .contenedor_contacto {
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background: #e2e2e2fa;
+    padding: 1rem;
 
     & .left_section {
-        width: 40vw;
+        margin-top: 2rem;
+        width: 35vw;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
+        row-gap: 3rem;
 
         & .left_section_span {
             width: 100%;
+
+
+            & h2 {
+                font-size: clamp(1rem, 5vw, 2.2rem);
+                color: #0000ff;
+                margin-bottom: 1rem;
+
+            }
+
+            & .left_section_datos {
+                width: 80%;
+                display: grid;
+                row-gap: 0.5rem;
+
+                & h3 {
+                    font-size: 1.7rem
+                }
+
+                & p {
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 }
 
 
-/* Fin de la seccion contactanos */
+/* Formulario de contacto */
 
 
 
+.right_section {
+    width: 40vw;
+    margin-top: 3rem;
+}
 
 .contact_form {
-    width: 40vw;
     height: auto;
-    border-radius: 10px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    background-color: #fbfbfb;
-    padding-left: 30px;
+    padding: 1rem;
 }
 
 
@@ -186,15 +211,15 @@ h1 {
 }
 
 
-h3 {
+/* h3 {
     font-size: 16px;
     padding-bottom: 30px;
     color: #0e0e0e;
-}
+} */
 
 
 p {
-    font-size: 14px;
+    font-size: 1.5rem;
     color: #0e0e0e;
 }
 
@@ -211,18 +236,18 @@ p {
 
 .formulario input:focus {
     outline: 0;
-    border: 1px solid #97d848;
+    border: 1px solid #ff0000;
 }
 
 
 .formulario textarea:focus {
     outline: 0;
-    border: 1px solid #97d848;
+    border: 1px solid #ff0000;
 
 
 }
 
-/* creado por javiniguez.com, Julio 2019 */
+/* Fin de la seccion contactanos */
 
 
 /* Inicio del FOOTER  */
