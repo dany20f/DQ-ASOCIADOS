@@ -112,22 +112,25 @@ header .header-links {
 }
 
 .section-servicios {
-    height: 45vh;
+    max-height: 35rem;
+    height: 35vh;
     max-height: 600px;
     width: 100vw;
     max-width: 2500px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
 
-
+.section-servicios:nth-child(even) {
+    background: #f3f3f3;
 }
 
 .img-servicios {
     height: 100%;
-    width: 45%;
+    width: 35%;
     overflow: hidden;
-    background-color: #0000ff;
+
 }
 
 .img-servicios img {
@@ -142,21 +145,61 @@ header .header-links {
 
 .img-servicios:first-child {
     border-radius: 0 50% 50% 0;
+    animation: slideInLeft 2s ease-out forwards;
 }
 
 .img-servicios:nth-child(2) {
     border-radius: 50% 0 0 50%;
+    animation: slideInRight 2s ease-out forwards;
 }
 
 .contenedor-texto {
-    width: 50%;
+    width: 60%;
     display: grid;
     place-items: center;
 
+
+}
+
+.contenedor-texto:first-child {
+    animation: slideInLeft 2s ease-out forwards;
+
+
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contenedor-texto:nth-child(2) {
+    animation: slideInRight 2s ease-out forwards;
+
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .texto-servicios {
-    padding: 1rem;
+    padding: 0 20%;
+
+
 }
 
 .texto-servicios h2 {

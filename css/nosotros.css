@@ -3,21 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     overflow-x: hidden;
-}
-
-/* INICIO DEL DISEÑO  HEADER */
-header {
+ }
+  
+  /* -------------------INICIO DEL DISEÑO  HEADER---------------------- */
+  header {
     max-width: 2500px;
     width: 100vw;
     height: 4rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,58 +22,62 @@ header {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid black;
-}
-
-.header-logo {
+  
+  }
+  
+  .header-logo {
     margin-left: 5%;
     margin-right: auto;
-}
-
-.header-logo a {
+  }
+  
+  .header-logo a {
     text-decoration: none;
     font-size: 1.5rem;
-}
-
-.header-logo a h2 {
+  }
+  
+  .header-logo a h2 {
     color: #0000ff;
-}
-
-.header-logo a h2 span {
+  }
+  
+  .header-logo a h2 span {
     color: rgb(255, 0, 0);
-}
-
-header .header-links {
+  }
+  
+  header .header-links {
     margin-right: 2%;
     margin-left: auto;
-
-}
-
-.header-links a {
+  
+  }
+  
+  .header-links a {
     font-size: 1.4rem;
     color: rgb(0, 0, 255);
     text-decoration: none;
     margin: 10px;
     border-bottom: 2px solid transparent;
     font-weight: bold;
-}
-
-.header-links a.active {
-    color: #ff0101;
+  }
+  
+  .header-links a:hover {
+    color: rgba(0, 0, 255, 0.795);
+  }
+  
+  .header-links a.active {
+    color: #ff0000;
     border-bottom-color: rgb(0, 0, 0);
-}
-
-|
-
-/* FIN DEL DISEÑO HEADER */
-main {
+  }
+  
+  /* FIN DEL DISEÑO HEADER */
+  main {
     margin-top: 4rem;
     max-width: 2500px;
-
 }
 
 .container_nosotros {
-    background: #ffffff;
+    width: 100%;
     padding: 5%;
+    max-width: 2500px;
+    background: #ffffff;
 
 }
 
@@ -153,11 +154,12 @@ main {
 }
 
 /* Fin del Nosotros */
+
 /* Inicio de Mision Y Vision */
 .container_mision_vision {
     max-width: 2500px;
     width: 100vw;
-    background: #f3f2f2;
+    background: #f3f0f0;
     padding: 3rem;
     text-align: center;
 }
@@ -205,10 +207,13 @@ main {
 }
 
 /* Fin de Mision Y Vision */
+
+
 /* Inicio de Valores */
 .valores {
+    max-width: 2500px;
     padding: 1rem 0;
-    background-color: #ffffff;
+    background: #ffffff;
     text-align: center;
     cursor: pointer;
 
@@ -216,7 +221,6 @@ main {
 
 .valores_desing {
     padding: 0 2rem;
-    background: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,17 +317,19 @@ main {
 }
 
 /* Fin de los Valores*/
+
 /* INICIO DE POR QUE ELEJIRNOS */
 .container_elegirnos {
+    width: 100vw;
+    max-width: 2500px;
     margin: 0;
     padding: 2rem;
     display: grid;
     place-items: center;
-    background: #f3f2f2;
+    background: #f3f0f0;
 }
 
 .elegirnos_desing {
-    width: 100vw;
     max-width: 2500px;
     margin: 1rem;
     text-align: center;
@@ -396,6 +402,7 @@ main {
 }
 
 /* FIN DE POR QUE ELEJIRNOS */
+
 
 /* Inicio del FOOTER  */
 

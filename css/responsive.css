@@ -576,12 +576,12 @@
 @media only screen and (max-width: 767px) {
 
 
-    /* .contenedor-servicios {
-     
+    .contenedor-servicios {
 
-        & .tittle {
+
+        .tittle {
             & h2 {
-                font-size:  2rem;
+                font-size: 2rem;
             }
 
             & span {
@@ -598,57 +598,69 @@
             padding: 1rem 0;
             row-gap: 1.5rem;
 
+
             & .img-servicios {
                 height: auto;
                 width: 80%;
                 height: 10rem;
                 overflow: hidden;
                 border-radius: 50% 50% 0 0;
+                animation: none;
+
             }
 
             .contenedor-texto {
                 width: 100%;
+                animation: none;
 
-                & .texto-servicios {
-                    display: grid;
-                    place-items: center;
-                    row-gap: 1rem;
 
-                    & h2 {
-                        font-size: clamp(1rem, 20vw, 1.5rem);
-                        text-align: center;
-                        line-height: normal;
-                    }
+            }
 
-                    & p {
-                        width: 80%;
-                        font-size: 1.2rem;
-                        text-align: justify;
 
-                    }
+
+            & .texto-servicios {
+                display: grid;
+                place-items: center;
+                row-gap: 1rem;
+                padding: 5%;
+
+                & h2 {
+                    font-size: clamp(1rem, 20vw, 1.5rem);
+                    text-align: center;
+                    line-height: normal;
+                }
+
+                & p {
+                    width: 80%;
+                    font-size: 1.2rem;
+                    text-align: justify;
+
                 }
             }
+        }
+
+    }
+
+    & .section-servicios:nth-child(odd) {
+
+
+        & .img-servicios {
+            order: 1;
+
 
         }
 
-        & .section-servicios:nth-child(odd) {
+        & .contenedor-texto {
+            order: 2;
 
-
-            & .img-servicios {
-                order: 1;
-
-            }
-
-            & .contenedor-texto {
-                order: 2;
-            }
         }
+    }
 
 
-
-    } */
 
 }
+
+
 
 /* VISTA TABLET */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {}
@@ -668,10 +680,76 @@
 /* -------------------------------------------------------------------------------------------*/
 
 /* VISTA MOVIL */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+    .contenedor_contacto {
+        display: flex;
+        flex-direction: column;
+
+        & .left_section {
+            width: 90vw;
+            margin-top: 0;
+            row-gap: 1.5rem;
+
+            & .left_section_span {
+                width: 95%;
+
+                & h2 {
+                    font-size: clamp(1.6rem, 5vw, 2rem);
+                    margin-bottom: 1rem;
+
+                }
+
+                & .left_section_datos {
+                    width: 80%;
+                    row-gap: 0.2rem;
+
+                    & h3 {
+                        font-size: clamp(1.4rem, 5vw, 1.8rem);
+
+                    }
+
+                    & p {
+                        font-size: clamp(1.2rem, 5vw, 1.5rem);
+
+                    }
+                }
+
+            }
+
+            & .left_section_span:first-child {
+                order: 1;
+            }
+
+            & .left_section_span:nth-child(2) {
+                order: 5;
+            }
+
+            & .left_section_span:nth-child(3) {
+                order: 3;
+            }
+        }
+
+        & .right_section {
+            width: 90vw;
+            background: #85a8ff;
+            border-radius: 1rem;
+            & .contact_form{
+                & input{
+                    width: 100%;
+                }
+                & textarea{
+                    width: 100%;
+                }
+                & button{
+                    width: 100%;
+                }
+            }
+        }
+    }
 
 
-
+}
 
 /* -------------------------------------------------------------------------------------------*/
 /* ------------------------FIN DEL Media queries de la pagina CONTACTANOS---------------------*/
